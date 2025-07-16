@@ -2,9 +2,10 @@ import cv2
 import pytesseract
 
 from PIL import Image, ImageDraw, ImageFont
+from pytesseract_util import set_tesseract_cmd
 
 
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+pytesseract.pytesseract.tesseract_cmd = set_tesseract_cmd()
 
 
 def split_into_characters(ocr_result):

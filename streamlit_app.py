@@ -1,7 +1,6 @@
 import os
 import streamlit as st
 from tempfile import NamedTemporaryFile
-from PIL import Image
 
 import pytesseract_letter
 import pytesseract_word

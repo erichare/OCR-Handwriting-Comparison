@@ -2,7 +2,9 @@ import cv2
 import pytesseract
 from PIL import Image, ImageDraw, ImageFont
 
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+from pytesseract_util import set_tesseract_cmd
+
+pytesseract.pytesseract.tesseract_cmd = set_tesseract_cmd()
 
 
 def split_into_words(ocr_result):
@@ -162,9 +164,6 @@ def create_juxtaposed_collage(ocr_data1, ocr_data2, author1_path, author2_path):
     fixed_height = 300  # Fixed height for all word images
     padding = 30  # Padding between images
     for letter in "abcdefghijklmnopqrstuvwxyz":
-        # Assuming each letter's block height is max_height // 26
-        block_height = max_height // 26
-
         # Center text in the middle of each block's height
         word_img_x = collage_width / 2  # Adjust X as needed
         word_img_y = y_offset  # Adjust Y for approximate vertical centering
