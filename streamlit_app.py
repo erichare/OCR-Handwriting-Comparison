@@ -1,6 +1,8 @@
+import base64
 import os
-import streamlit as st
 from tempfile import NamedTemporaryFile
+
+import streamlit as st
 
 import pytesseract_letter
 import pytesseract_word
@@ -8,8 +10,21 @@ import easyocr_letter
 import easyocr_word
 
 
+# Path to your local image file (replace with your actual path)
+image_path = os.path.join(os.path.dirname(__file__), "images", "omniacsdao_logo.png")
+
+# Read the image file in binary mode
+with open(image_path, "rb") as image_file:
+    # Encode the binary data to Base64 and decode to a string
+    base64_image = base64.b64encode(image_file.read()).decode('utf-8')
+
+
 def main():
-    st.title(":red[OCR Handwriting Comparison] 🎨")
+    # Load external CSS
+    with open("style.css") as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+    st.markdown(f'<h1 style="color:#09a5ff">OCR Handwriting Comparison <img src="data:image/png;base64,{base64_image}" alt="logo" width="30"></h1>', unsafe_allow_html=True)
     st.sidebar.header("OCR Algorithm")
     with st.sidebar.expander("Instructions"):
         st.markdown("""

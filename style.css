@@ -1,0 +1,54 @@
+:root {
+    --primary-color: #0B6623;  /* Dark green for accents like radio selection */
+}
+
+[data-testid="stAppViewContainer"] {
+    background-color: #0a0f1f;  /* Dark navy blue */
+}
+[data-testid="stSidebar"] {
+    background-color: #1a1f2f;  /* Slightly lighter dark blue for sidebar */
+}
+[data-testid="stHeader"] {
+    background-color: #0a0f1f;
+}
+h1 {
+    color: #0B6623;  /* Green accent */
+}
+h2, h3, h4, h5, h6 {
+    color: #09a5ff;  /* Blue accent */
+}
+.stButton > button {
+    background-color: #0B6623;  /* Green button */
+    color: white;
+    border-radius: 8px;
+    border: none;
+}
+.stButton > button:hover {
+    background-color: #0B6623;
+}
+.stRadio > label {
+    color: #fafafa;  /* Light text */
+}
+.stSelectbox label {
+    color: #fafafa;
+}
+.stCheckbox label {
+    color: #fafafa;
+}
+.stFileUploader label {
+    color: #fafafa;
+}
+.stMarkdown {
+    color: #fafafa;
+}
+.stSuccess {
+    background-color: #1a1f2f;
+    color: #09a5ff;
+}
+.stSpinner {
+    color: #09a5ff;
+}
+/* Adjust expander text color */
+.streamlit-expanderHeader {
+    color: #fafafa;
+}
