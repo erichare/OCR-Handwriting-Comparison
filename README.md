@@ -1,6 +1,6 @@
 # OCR Handwriting Comparison
 
-![Example of OCR Handwriting Comparison](images/Writing_scene.mp4)
+![Example of OCR Handwriting Comparison](images/Writing_scene.gif)
 
 This project allows users to compare handwritten text recognition performance between different OCR (Optical Character Recognition) algorithms. It supports Pytesseract and EasyOCR algorithms and provides options to compare either letters or words from two uploaded images.
 
