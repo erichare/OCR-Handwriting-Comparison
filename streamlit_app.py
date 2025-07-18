@@ -147,7 +147,7 @@ def video_analysis_tab():
     st.header("How to Use OCR Comparison Tool")
     
     # Path to walkthrough video - replace with your actual video path
-    video_path = os.path.join(os.path.dirname(__file__), "videos", "walkthrough.mp4")
+    video_path = os.path.join(os.path.dirname(__file__), "images", "ocr_handwriting_walkthrough_20250718.mp4")
     
     # Check if video exists and display it
     if os.path.exists(video_path):
