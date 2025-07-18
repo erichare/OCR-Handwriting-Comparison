@@ -196,6 +196,15 @@ def main():
     # Title in sidebar
     st.sidebar.markdown(f'<h1 style="color:#09a5ff">OCR Handwriting Comparison <img src="data:image/png;base64,{base64_image}" alt="logo" width="30"></h1>', unsafe_allow_html=True)
     
+    # Create tabs
+    tab1, tab2 = st.tabs(["OCR Comparison", "Video Tutorial"])
+    
+    with tab1:
+        ocr_comparison_tab()
+    
+    with tab2:
+        video_analysis_tab()
+
     # Footer in sidebar
     st.sidebar.markdown("---")
     st.sidebar.markdown(
@@ -207,15 +216,6 @@ def main():
         """,
         unsafe_allow_html=True
     )
-    
-    # Create tabs
-    tab1, tab2 = st.tabs(["OCR Comparison", "Video Tutorial"])
-    
-    with tab1:
-        ocr_comparison_tab()
-    
-    with tab2:
-        video_analysis_tab()
 
 
 if __name__ == "__main__":
